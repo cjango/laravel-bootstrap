@@ -10,8 +10,4 @@ Route::group([
     'middleware' => config('api.route.middleware'),
 ], function (Router $router) {
 
-    $router->get('/', 'IndexController@index');
-
 });
-
-require __DIR__ . '/Routers/user.php';

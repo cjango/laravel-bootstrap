@@ -1,10 +1,7 @@
 <?php
 
-use Encore\Admin\Facades\Admin;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
-
-Admin::routes();
 
 Route::group([
     'prefix'     => config('admin.route.prefix'),
@@ -16,5 +13,3 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
 
 });
-
-require __DIR__ . '/Routers/user.php';
