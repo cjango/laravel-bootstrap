@@ -51,4 +51,17 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasOne(UserInfo::class);
     }
 
+    /**
+     * Notes: 设置密码
+     * @Author: <C.Jason>
+     * @Date  : 2020/10/30 2:49 下午
+     * @param $value
+     */
+    protected function setPasswordAttribute($value)
+    {
+        if ($value) {
+            $this->attributes['password'] = bcrypt($value);
+        }
+    }
+
 }

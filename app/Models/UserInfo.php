@@ -9,4 +9,7 @@ class UserInfo extends Model
 {
 
     use BelongsToUser;
+
+    protected $primaryKey = 'user_id';
+
 }
